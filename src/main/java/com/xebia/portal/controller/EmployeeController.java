@@ -3,7 +3,6 @@ package com.xebia.portal.controller;
 import java.util.List;
 import java.util.Optional;
 
-import javax.annotation.Resource;
 import javax.ws.rs.WebApplicationException;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,8 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.xebia.portal.model.Employee;
 import com.xebia.portal.service.EmployeeService;
 import com.xebia.portal.validator.Validator;
-import com.xebia.portal.validator.impl.EmployeeValidator;
 
+@CrossOrigin("*")
 @RestController
 @RequestMapping(path = "/employee")
 public class EmployeeController {
@@ -30,7 +29,6 @@ public class EmployeeController {
 	@Autowired
 	private Validator employeeValidator;
 	
-	@CrossOrigin("*")
 	@PostMapping("/create")
 	public Employee createEmployee(@RequestBody(required = true) Employee emp){
 				
@@ -44,7 +42,6 @@ public class EmployeeController {
 		throw new WebApplicationException("There is an problem creating employee.", HttpStatus.BAD_REQUEST.value());
 	}
 	
-	@CrossOrigin("*")
 	@GetMapping(path="/list")
 	public List<Employee> listEmployee() {
 		return employeeService.listEmployee();
