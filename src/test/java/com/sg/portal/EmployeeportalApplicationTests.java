@@ -1,4 +1,4 @@
-package com.xebia.portal;
+package com.sg.portal;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,6 +11,7 @@ public class EmployeeportalApplicationTests {
 
 	@Test
 	public void contextLoads() {
+		EmployeePortalApplication.main(new String[] {"Run", "successfully"});
 	}
 
 }

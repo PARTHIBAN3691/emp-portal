@@ -1,9 +1,9 @@
-package com.xebia.portal.validator.impl;
+package com.sg.portal.validator.impl;
 
 import org.springframework.stereotype.Component;
 
-import com.xebia.portal.model.Employee;
-import com.xebia.portal.validator.Validator;
+import com.sg.portal.model.Employee;
+import com.sg.portal.validator.Validator;
 
 @Component(value = "employeeValidator")
 public class EmployeeValidator implements Validator {

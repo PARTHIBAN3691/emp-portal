@@ -1,4 +1,4 @@
-package com.xebia.portal.validator;
+package com.sg.portal.validator;
 
 import org.springframework.stereotype.Component;
 
